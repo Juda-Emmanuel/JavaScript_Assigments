@@ -1,0 +1,30 @@
+JavaScript engines are responsible for interpreting and executing JavaScript code. These engines are part of web browsers (for client-side execution) and can also run on servers (using platforms like Node.js). The internal workings of a JavaScript engine are quite complex, but I'll provide a simplified overview of the key steps involved:
+
+1. Tokenization and Lexical Analysis:
+   When JavaScript code is executed, the engine first breaks it down into smaller units called tokens. Tokens include keywords, variables, operators, and more. Lexical analysis involves identifying and categorizing these tokens.
+
+2. Parsing:
+   The tokens are then parsed to create an abstract syntax tree (AST). The AST represents the structure of the code and its relationships. This step ensures that the code adheres to the language's grammar rules.
+
+3. Compilation:
+   The engine generates lower-level code or bytecode from the AST. This code is closer to machine code and is more efficient to execute than the original JavaScript source code.
+
+4. Optimization (Just-In-Time Compilation):
+   Many modern JavaScript engines employ just-in-time (JIT) compilation. The engine analyzes the code as it's executed and identifies parts of the code that are frequently used. It then compiles those parts into optimized machine code for faster execution.
+
+5. Execution:
+   The compiled code is executed in an environment called the execution context. The engine manages the call stack, which keeps track of the order of function calls and their corresponding contexts. Each function call creates a new execution context, and when a function is completed, its context is removed from the stack.
+
+6. Scope and Variable Resolution:
+   JavaScript uses a scope chain to resolve variable references. When a variable is accessed, the engine searches through the scope chain to find the correct value. Closures are an important aspect of scope, as they allow functions to maintain references to variables from their containing scopes.
+
+7. Memory Management:
+   JavaScript engines manage memory, including allocation and deallocation of memory for objects and variables. Modern engines employ garbage collection to automatically reclaim memory that is no longer needed.
+
+8. Event Loop and Asynchronous Execution:
+   JavaScript engines support asynchronous programming through mechanisms like the event loop. The event loop manages asynchronous tasks, such as timers, network requests, and user interactions. It ensures that these tasks are executed when they are ready, without blocking the main thread.
+
+9. DOM Manipulation and Interaction:
+   In the case of client-side execution, the engine interacts with the Document Object Model (DOM) to manipulate web page content dynamically. JavaScript can modify the DOM structure, style, and behavior based on user interactions and other events.
+
+It's important to note that different JavaScript engines (such as V8 used in Chrome, SpiderMonkey in Firefox, and JavaScriptCore in Safari) might have variations in their internal architecture and optimizations. However, the high-level process outlined above is a general overview of how JavaScript engines work to interpret and execute JavaScript code.
